@@ -1,5 +1,11 @@
-- name: Ping The Servers
-  hosts : demo
-  tasks :
-   - name : Ping The Server
-     ansible.builtin.ping: 
+- name: Install and Start
+  hosts: demo
+  become: yes
+  tasks:
+  - name: Install nginx
+    ansible.builtin.dnf:
+     name : nginx
+     state : latest
+  - name: Run Nginx
+    ansible.builtin.service:
+    state: started
