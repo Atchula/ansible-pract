@@ -3,17 +3,17 @@
   hosts : localhost
   vars :
    course : "Devops"
-  vars-file :
+  vars_files :
     - file1
     - file2
   tasks :
    - name : Local Variables
-     ansible.builtin.debug:
-       msg: "Local Variables Are :"
+     #ansible.builtin.debug:
+       #msg: "Local Variables Are :"
      ansible.builtin.debug:
        msg : "{{course}}"
    - name : Variables From file
-     ansible.builtin.debug:
-        msg : "Variables From File Are"
+     #ansible.builtin.debug:
+       # msg : "Variables From File Are"
      ansible.builtin.debug:
         msg : "{{name}},{{mssg}}"
