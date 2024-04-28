@@ -1,9 +1,15 @@
 # Variables Practice
-- name: Variables
-  hosts: localhost
+- name : Testing Variables
+  hosts : localhost
   vars : 
-     name: "HANU"
+    course : "Devops"
   tasks :
-   - name : Print Message
-     ansible.builtin.debug:
-       msg: "Hello,World Welcome {{name}}"
+   - name : Task Level Variable
+     vars :
+       course : "Java"
+     ansible.builtin.debug :
+       msg: "Course Is {{course}}"
+   - name : Play Level Variable
+     ansible.builtin.debug :
+       msg : "Course Is {{course}}"    
+       
