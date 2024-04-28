@@ -15,7 +15,7 @@
   become : yes
   tasks :
     - name: Installing Nginx
-      ansible.bulitin.package:
+      ansible.builtin.package:
          name: nginx
          state: latest
 
