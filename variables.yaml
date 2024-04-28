@@ -1,15 +1,19 @@
 # Variables Practice
-- name : Testing Variables
+- name : Variables From Files
   hosts : localhost
-  vars : 
-    course : "Devops"
+  vars :
+   course : "Devops"
+  vars-file :
+    - file1
+    - file2
   tasks :
-   - name : Task Level Variable
-     vars :
-       course : "Java"
-     ansible.builtin.debug :
-       msg: "Course Is {{course}}"
-   - name : Play Level Variable
-     ansible.builtin.debug :
-       msg : "Course Is {{course}}"    
-       
+   - name : Local Variables
+     ansible.builtin.debug:
+       msg: "Local Variables Are :"
+     ansible.builtin.debug:
+       msg : "{{course}}"
+   - name : Variables From file
+      ansible.builtin.debug:
+        msg : "Variables From File Are"
+      ansible.builtin.debug:
+        msg : "{{name}},{{mssg}}"
