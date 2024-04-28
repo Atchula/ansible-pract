@@ -1,19 +1,17 @@
-# Variables Practice
-- name : Variables From Files
+# Prompt Variables
+- name : Prompting Variables
   hosts : localhost
-  vars :
-   course : "Devops"
-  vars_files :
-    - file1
-    - file2
+  vars_prompt:
+    - name : USERNAME
+      prompt : "PLEASE ENTER USERNAME"
+      private : false
+
+    - name : PASSWORD
+      prompt : "PLEASE ENTER PASSWORD"
+      private : true
   tasks :
-   - name : Local Variables
-     #ansible.builtin.debug:
-       #msg: "Local Variables Are :"
-     ansible.builtin.debug:
-       msg : "{{course}}"
-   - name : Variables From file
-     #ansible.builtin.debug:
-       # msg : "Variables From File Are"
-     ansible.builtin.debug:
-        msg : "{{name}},{{mssg}}"
+   - name : Printing Variables
+     ansible.builtin.debug :
+        msg: "Hi {{USERNAME}} YOUR PASSWORD IS {{PASSWORD}}"
+
+
