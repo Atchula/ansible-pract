@@ -1,0 +1,9 @@
+# Variables Practice
+- name: Variables
+  hosts: localhost
+  vars : 
+     name: "HANU"
+  tasks :
+   - name : Print Message
+     ansible.builtin.debug:
+       msg: "Hello,World Welcome {{name}}"
