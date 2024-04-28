@@ -1,0 +1,27 @@
+- name : Installing SQL
+  hosts : demo
+  become : yes
+  tasks :
+   - name : Installing SQL
+     ansible.builtin.package:
+      name: mysql_server
+      state : latest
+   - name : Remove SQL
+     ansible.builtin.package:
+      name: mysql_server
+      state: absent
+- name : Installing NGINX
+  hosts : demo
+  become : yes
+  tasks :
+    - name: Installing Nginx
+      ansible.bulitin.package:
+         name: nginx
+         state: latest
+
+    - name : Remove Nginx
+      ansible.builtin.package :
+        name : nginx
+        state : absent
+
+     
