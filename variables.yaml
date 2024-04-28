@@ -13,7 +13,7 @@
      ansible.builtin.debug:
        msg : "{{course}}"
    - name : Variables From file
-      ansible.builtin.debug:
+     ansible.builtin.debug:
         msg : "Variables From File Are"
-      ansible.builtin.debug:
+     ansible.builtin.debug:
         msg : "{{name}},{{mssg}}"
