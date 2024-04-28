@@ -4,11 +4,11 @@
   tasks :
    - name : Installing SQL
      ansible.builtin.package:
-      name: mysql_server
+      name: mysql-server
       state : latest
    - name : Remove SQL
      ansible.builtin.package:
-      name: mysql_server
+      name: mysql-server
       state: absent
 - name : Installing NGINX
   hosts : demo
