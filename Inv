@@ -5,4 +5,4 @@
 localhost
 
 [localhost:vars]
-test : "Testing In Inv Level"
+test =  "Testing In Inv Level"
