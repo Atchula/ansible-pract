@@ -5,7 +5,4 @@
 localhost
 
 [localhost:vars]
-course="Java"
-
-[demo:vars]
-course="Demo Java"
+test : "Testing In Inv Level"
