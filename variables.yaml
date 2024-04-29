@@ -4,7 +4,7 @@
   tasks :
    - name : Print
      vars :
-      course : "Java Is Object"
+      course : 3
      ansible.builtin.debug :
       msg : "{{course}}"    
 
