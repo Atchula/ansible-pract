@@ -1,12 +1,8 @@
-# Print Data types
-- name : Printing Data Types
+# Conditions
+- name : Conditions 
   hosts : localhost
   tasks :
-   - name : Print
-     vars :
-      course : 
-         name : Java
-         price : 30
-     ansible.builtin.debug :
-      msg : "{{course}}"    
+    - name : User Creation
+      ansible.builtin.command : id expense
+      
 
