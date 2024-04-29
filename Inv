@@ -6,3 +6,6 @@ localhost
 
 [localhost:vars]
 course="Java"
+
+[demo:vars]
+course="Demo Java"
