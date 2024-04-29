@@ -7,6 +7,10 @@
       register : USERINFO
       ignore_errors : true
 
+    - name : Create User
+      ansible.builtin.command: adduser expense
+      when : USERINFO.RC != 0
+
     - name : print Hello
       ansible.builtin.debug :
         msg : "HELLO"
