@@ -5,8 +5,8 @@
     - name : User Creation
       ansible.builtin.command : id expense
       register : USERINFO
-      ignore-error : true
-      
+      ignore-errors : true
+
     - name : print Hello
       ansible.builtin.debug :
         msg : "HELLO"
