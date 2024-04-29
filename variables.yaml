@@ -1,10 +1,10 @@
 # Testing Variables.
 - name : "Testing Variable scope"
   hosts: localhost
-  #vars_files :
-   # - file1
+  vars_files :
+    - file1
   vars : 
-    #test : "Testing In Play Level"
+    test : "Testing In Play Level"
   vars_prompt :
     - name : test
       prompt : Eneter Value
@@ -13,7 +13,7 @@
   tasks :
     - name : Printing Variable
       vars : 
-         #test : "Testing In Task Level"
+         test : "Testing In Task Level"
       ansible.builtin.debug :
         msg : "Hello,{{test}}"
 
