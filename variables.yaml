@@ -4,7 +4,7 @@
   vars_files :
     - file1
   vars : 
-    test : "Testing In Play Level"
+    #test : "Testing In Play Level"
   tasks :
     - name : Printing Variable
       vars : 
