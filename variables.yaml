@@ -1,19 +1,9 @@
-# Testing Variables.
-- name : "Testing Variable scope"
-  hosts: localhost
-  vars_files :
-    - file1
-  vars : 
-    test : "Testing In Play Level"
-  vars_prompt :
-    - name : test
-      prompt : Eneter Value
-      private : false
-
+# Print Data types
+- name : Printing Data Types
+  hosts : localhost
   tasks :
-    - name : Printing Variable
-      vars : 
-         test : "Testing In Task Level"
-      ansible.builtin.debug :
-        msg : "Hello,{{test}}"
+    vars :
+      course : "Java Is Object"
+    ansible.builtin.debug :
+      msg : "{{course}}"    
 
