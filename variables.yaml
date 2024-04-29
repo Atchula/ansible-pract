@@ -5,6 +5,6 @@
    - name : Print
      vars :
       course : "Java Is Object"
-    ansible.builtin.debug :
+     ansible.builtin.debug :
       msg : "{{course}}"    
 
