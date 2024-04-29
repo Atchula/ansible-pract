@@ -3,6 +3,6 @@
   hosts : localhost
   tasks : 
    - name : Printing Variable
-     ansible.builtin.debug
+     ansible.builtin.debug:
       msg : "The Variable Is {{course}}"
 
