@@ -4,7 +4,9 @@
   tasks :
    - name : Print
      vars :
-      course : 3
+      course : 
+         name : Java
+         price : 30
      ansible.builtin.debug :
       msg : "{{course}}"    
 
