@@ -1,6 +1,6 @@
 # Testing Variables.
 - name : Testing Variable
-  hosts : {{clargs}}
+  hosts : "{{clargs}}"
   tasks : 
    - name : Printing Variable
      ansible.builtin.debug:
