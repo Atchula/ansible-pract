@@ -2,7 +2,8 @@
 - name : Printing Data Types
   hosts : localhost
   tasks :
-    vars :
+   - name : Print
+     vars :
       course : "Java Is Object"
     ansible.builtin.debug :
       msg : "{{course}}"    
