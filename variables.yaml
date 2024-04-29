@@ -8,7 +8,7 @@
   #vars_prompt :
     #- name : test
      # prompt : Eneter Value
-     $ private : false
+     # private : false
 
   tasks :
     - name : Printing Variable
