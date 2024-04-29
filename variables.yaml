@@ -8,7 +8,7 @@
   tasks :
     - name : Printing Variable
       vars : 
-         test : "Testing In Task Level"
+         #test : "Testing In Task Level"
       ansible.builtin.debug :
         msg : "Hello,{{test}}"
 
