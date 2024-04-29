@@ -1,17 +1,8 @@
-# Prompt Variables
-- name : Prompting Variables
+# Testing Variables.
+- name : Testing Variable
   hosts : localhost
-  vars_prompt:
-    - name : USERNAME
-      prompt : "PLEASE ENTER USERNAME"
-      private : false
-
-    - name : PASSWORD
-      prompt : "PLEASE ENTER PASSWORD"
-      private : true
-  tasks :
-   - name : Printing Variables
-     ansible.builtin.debug :
-        msg: "Hi {{USERNAME}} YOUR PASSWORD IS {{PASSWORD}}"
-
+  tasks : 
+   - name : Printing Variable
+     ansible.builtin.debug
+      msg : "The Variable Is {{course}}"
 

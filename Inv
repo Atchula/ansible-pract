@@ -1,2 +1,8 @@
 [demo]
 172.31.18.170
+
+[localhost]
+localhost
+
+[localhost:vars]
+course="Java"
