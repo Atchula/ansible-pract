@@ -5,10 +5,10 @@
    # - file1
   vars : 
     #test : "Testing In Play Level"
-  #vars_prompt :
-    #- name : test
-     # prompt : Eneter Value
-     # private : false
+  vars_prompt :
+    - name : test
+      prompt : Eneter Value
+      private : false
 
   tasks :
     - name : Printing Variable
